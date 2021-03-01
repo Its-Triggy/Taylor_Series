@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 class TaylorSeries:
 
 	def __init__(self, accuracy = 10):
-		self.function = input("what is the function? : ")
+		self.function = input("what is the function?  e.g. cos(x) : ")
 		self.accuracy = min(accuracy, 7)
 		self.domain = (-pi, pi)
 		self.spacing = 0.003
@@ -92,8 +92,6 @@ class TaylorSeries:
 		for i in range(1,n):
 			total *= i
 		return total
-
-pi = 3.1514926535897932384626
 
 ts = TaylorSeries()
 coefs = ts.getCoefs()
